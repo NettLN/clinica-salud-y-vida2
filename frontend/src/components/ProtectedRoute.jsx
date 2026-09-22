@@ -2,7 +2,11 @@ import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
+<<<<<<< HEAD
 const ProtectedRoute = ({ children, permisosRequeridos }) => {
+=======
+const ProtectedRoute = ({ children, allowedRoles }) => {
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2
   const { user, loading } = useAuth();
 
   if (loading) {
@@ -13,6 +17,7 @@ const ProtectedRoute = ({ children, permisosRequeridos }) => {
     return <Navigate to="/login" replace />;
   }
 
+<<<<<<< HEAD
   if (permisosRequeridos && permisosRequeridos.length > 0) {
     const tienePermiso = permisosRequeridos.some(permiso => user.permisos && user.permisos.includes(permiso));
     if (!tienePermiso) {
@@ -24,6 +29,11 @@ const ProtectedRoute = ({ children, permisosRequeridos }) => {
         </div>
       );
     }
+=======
+  if (allowedRoles && !allowedRoles.includes(user.rol)) {
+    // Si el usuario no tiene permiso, lo enviamos al login o a un "No autorizado"
+    return <Navigate to="/login" replace />;
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2
   }
 
   return children ? children : <Outlet />;

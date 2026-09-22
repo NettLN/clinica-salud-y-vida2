@@ -1,6 +1,10 @@
 const Cita = require('../models/Cita');
 const HorarioAtencion = require('../models/HorarioAtencion');
+<<<<<<< HEAD
 
+=======
+const { Medico } = require('../../users/models/Usuario');
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2
 const moment = require('moment');
 
 // Obtener los horarios de atención y las citas ocupadas, y generar bloques disponibles de 30 min.

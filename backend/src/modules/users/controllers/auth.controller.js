@@ -6,7 +6,11 @@ const login = async (req, res) => {
   const { email, password } = req.body;
 
   try {
+<<<<<<< HEAD
     const user = await Usuario.findOne({ email }).populate('rolId');
+=======
+    const user = await Usuario.findOne({ email });
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2
     if (!user) {
       return res.status(400).json({ message: 'Credenciales inválidas' });
     }
@@ -16,6 +20,7 @@ const login = async (req, res) => {
       return res.status(400).json({ message: 'Credenciales inválidas' });
     }
 
+<<<<<<< HEAD
     const rolNombre = user.rolId ? user.rolId.nombre : null;
     const permisos = user.rolId ? user.rolId.permisos : [];
 
@@ -25,6 +30,13 @@ const login = async (req, res) => {
       id: user._id,
       rol: rolNombre,
       permisos: permisos,
+=======
+    // Crear el Payload del JWT
+    const payload = {
+      _id: user._id, // Agregado para compatibilidad frontend
+      id: user._id,
+      rol: user.rol,
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2
       nombre: user.nombre,
       apellido: user.apellido
     };
@@ -45,6 +57,7 @@ const login = async (req, res) => {
   }
 };
 
+<<<<<<< HEAD
 const refresh = async (req, res) => {
   try {
     // El usuario ya viene del authMiddleware, usamos su id
@@ -82,3 +95,6 @@ const refresh = async (req, res) => {
 };
 
 module.exports = { login, refresh };
+=======
+module.exports = { login };
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2

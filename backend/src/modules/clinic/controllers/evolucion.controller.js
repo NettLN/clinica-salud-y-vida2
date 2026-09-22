@@ -54,8 +54,12 @@ const crearEvolucion = async (req, res) => {
 
     res.status(201).json(nuevaEvolucion);
   } catch (error) {
+<<<<<<< HEAD
     console.error('Error en crearEvolucion:', error);
     res.status(500).json({ message: 'Error en el servidor', error: error.message });
+=======
+    res.status(500).json({ message: 'Error en el servidor' });
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2
   }
 };
 

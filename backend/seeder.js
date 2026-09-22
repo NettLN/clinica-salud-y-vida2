@@ -8,6 +8,7 @@ const seedMedicamentos = async () => {
       console.log('[Seeder] Creando 10 medicamentos iniciales...');
       
       const medicamentosMock = [
+<<<<<<< HEAD
         { nombreComercial: 'Paracetamol', principioActivo: 'Paracetamol 500mg', presentacion: 'Tableta', precioUnitario: 0.50, stockMinimo: 50 },
         { nombreComercial: 'Amoxicilina', principioActivo: 'Amoxicilina 500mg', presentacion: 'Cápsula', precioUnitario: 1.20, stockMinimo: 30 },
         { nombreComercial: 'Ibuprofeno', principioActivo: 'Ibuprofeno 400mg', presentacion: 'Tableta', precioUnitario: 0.80, stockMinimo: 40 },
@@ -18,6 +19,18 @@ const seedMedicamentos = async () => {
         { nombreComercial: 'Loratadina', principioActivo: 'Loratadina 10mg', presentacion: 'Tableta', precioUnitario: 1.10, stockMinimo: 15 },
         { nombreComercial: 'Diclofenaco', principioActivo: 'Diclofenaco 50mg', presentacion: 'Tableta', precioUnitario: 0.70, stockMinimo: 35 },
         { nombreComercial: 'Salbutamol', principioActivo: 'Salbutamol Inhalador', presentacion: 'Inhalador', precioUnitario: 5.00, stockMinimo: 10 }
+=======
+        { nombreComercial: 'Paracetamol', principioActivo: 'Paracetamol 500mg', precioUnitario: 0.50, stockMinimo: 50 },
+        { nombreComercial: 'Amoxicilina', principioActivo: 'Amoxicilina 500mg', precioUnitario: 1.20, stockMinimo: 30 },
+        { nombreComercial: 'Ibuprofeno', principioActivo: 'Ibuprofeno 400mg', precioUnitario: 0.80, stockMinimo: 40 },
+        { nombreComercial: 'Omeprazol', principioActivo: 'Omeprazol 20mg', precioUnitario: 2.00, stockMinimo: 20 },
+        { nombreComercial: 'Losartán', principioActivo: 'Losartán Potásico 50mg', precioUnitario: 1.50, stockMinimo: 25 },
+        { nombreComercial: 'Metformina', principioActivo: 'Metformina 850mg', precioUnitario: 0.90, stockMinimo: 45 },
+        { nombreComercial: 'Aspirina', principioActivo: 'Ácido Acetilsalicílico 100mg', precioUnitario: 0.30, stockMinimo: 60 },
+        { nombreComercial: 'Loratadina', principioActivo: 'Loratadina 10mg', precioUnitario: 1.10, stockMinimo: 15 },
+        { nombreComercial: 'Diclofenaco', principioActivo: 'Diclofenaco 50mg', precioUnitario: 0.70, stockMinimo: 35 },
+        { nombreComercial: 'Salbutamol', principioActivo: 'Salbutamol Inhalador', precioUnitario: 5.00, stockMinimo: 10 }
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2
       ];
 
       for (let m of medicamentosMock) {

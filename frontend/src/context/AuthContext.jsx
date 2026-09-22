@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import api from '../services/api';
+<<<<<<< HEAD
 import { io } from 'socket.io-client';
+=======
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2
 
 const AuthContext = createContext(null);
 
@@ -8,8 +11,13 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+<<<<<<< HEAD
   // Primer efecto para inicializar desde localStorage
   useEffect(() => {
+=======
+  useEffect(() => {
+    // Al cargar, recuperar estado de localStorage
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2
     const storedUser = localStorage.getItem('clinica_user');
     if (storedUser) {
       setUser(JSON.parse(storedUser));
@@ -17,6 +25,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(false);
   }, []);
 
+<<<<<<< HEAD
   // Segundo efecto para socket.io
   useEffect(() => {
     if (!user) return;
@@ -50,6 +59,8 @@ export const AuthProvider = ({ children }) => {
     };
   }, [user]);
 
+=======
+>>>>>>> 222267355ac9746cf00d90f0764db6173cbacbc2
   const login = async (email, password) => {
     try {
       const response = await api.post('/auth/login', { email, password });
